@@ -1,0 +1,172 @@
+
+
+/* FONT SIZES            Mobile              Desktop
+
+primary heading         40px/900/50px         56px/900/70px
+
+secondary heading       32px/900/40px         40px/900/50px
+
+third heading           28px/900/34px         28px/900/34px  
+
+fourth heading          20px/900/25px         20px/900/25px        
+
+body text large         18px/600/30px         18px/600/30px
+
+body text small         16px/600/27px         16px/600/27px
+
+link text               15px/900/25px         15px/900/25px
+
+main-menu               20px/600/25px         18px/600/25px
+
+footer-menu             18px/600/25px         18px/600/25px
+
+wittnes-name            18px/900/22px         18px/900/22px 
+
+wittnes-position        14px/600/25px         14px/600/25px     */
+
+
+/*
+ff-headline: Fraunces 9pt Soft
+ff-text: Barlow */
+
+
+
+:root {
+
+    --ff-heading: 'Fraunces';
+    --ff-text:    'Barrow';
+
+    /* all font-sizes */
+    --fs-100: 0.875rem;  /* 14px */
+    --fs-200: 0.9375rem; /* 15px */
+    --fs-300: 1rem;      /* 16px */
+    --fs-400: 1.125rem;  /* 18px */
+    --fs-500: 1.25rem;   /* 20px */
+    --fs-600: 1.75rem;   /* 28px */
+    --fs-700: 2rem;      /* 32px */
+    --fs-800: 2.5rem;    /* 40px */
+    --fs-900: 3.5rem;    /* 56px */
+
+    /* font-size allignment for mobile */
+    --fs-primary-heading:   var(--fs-800);
+    --fs-secondary-heading: var(--fs-700);
+    --fs-third-heading:     var(--fs-600);
+    --fs-fourth-heading:    var(--fs-500);
+    --fs-body-text-large:   var(--fs-400);
+    --fs-body-text-small:   var(--fs-300);
+    --fs-link-text:         var(--fs-200);
+    --fs-main-menu:         var(--fs-500);
+    --fs-footer-menu:       var(--fs-400);
+    --fs-wittnes-name:      var(--fs-400);
+    --fs-wittnes-position:  var(--fs-100);
+
+    /* all line-spacings */
+    --ls-200: 1.375rem;  /* 22px */
+    --ls-300: 1.5625rem; /* 25px */
+    --ls-400: 1.6875rem; /* 27px */
+    --ls-500: 1.875rem;  /* 30px */
+    --ls-600: 2.125rem;  /* 34px */
+    --ls-700: 2.5rem;    /* 40px */
+    --ls-800: 3.125rem;  /* 50px */
+    --ls-900: 4.375rem;  /* 70px */
+
+    /* line-spacing allignment for mobile */
+    --ls-primary-heading:   var(--ls-800);
+    --ls-secondary-heading: var(--ls-700);
+    --ls-third-heading:     var(--ls-600);
+    --ls-fourth-heading:    var(--ls-300);
+    --ls-body-text-large:   var(--ls-500);
+    --ls-body-text-small:   var(--ls-400);
+    --ls-link-text:         var(--ls-300);
+    --ls-main-menu:         var(--ls-300);
+    --ls-footer-menu:       var(--ls-300);
+    --ls-wittnes-name:      var(--ls-200);
+    --ls-wittnes-position:  var(--ls-100);
+
+
+    --fw-normal: 600;
+    --fs-bold: 700;
+    --fw-extra-bold: 900;
+
+    --fclr-1: hsl(212, 27%, 19%);  /* Very dark desaturated blue: */
+    --fclr-2: hsl(213, 9%, 39%);     /* Very dark grayish blue */
+    --fclr-3: hsl(232, 10%, 55%);   /* Dark grayish blue */
+    --fclr-4: hsl(210, 4%, 67%);    /*  Grayish blue */
+    --fclr-5: hsl(0, 0%, 100%);
+    --fclr-6: hsl(167, 40%, 24%);
+    --fclr-7: hsla(233, 10%, 55%, 1);
+
+    --fclr-primary-heading:     var(--fclr-5);
+    --fclr-secondary-heading:   var(--fclr-1);
+    --fclr-third-heading:       var(--fclr-6);
+    --fclr-fourth-heading:      var(--fclr-4);
+    --fclr-body:                var(--fclr-7);
+
+}
+
+@media screen and (min-width: 1440px) {
+
+    /* font-size adaption for desktop */
+    --fs-primary-heading:   var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+    --fs-main-menu:         var(--fs-400); /* samaller than mobile */
+
+    /* line-spacing adaption for desktop */
+    --ls-primary-heading:   var(--ls-900);
+    --ls-secondary-heading: var(--ls-800);
+}
+
+
+/*  DEFINITION OF UTILITY-CLASSES   */
+
+.fs-primary-heading {font-size: var(--fs-primary-heading);}
+.fs-secondary-heading {font-size: var(--fs-secondary-heading);}
+.fs-third-heading {font-size: var(--fs-primary-thirdeading);}
+.fs-fourth-heading {font-size: var(--fs-primary-fourthng);}
+.fs-body-text-large {font-size: var(--fs-body-text-large)}
+.fs-body-text-small {font-size: var(--fs-body-text-small)}
+.fs-link-text {font-size: var(--ls-link-text);}
+.fs-main-menu {font-size: var(--fs-main-menu);}
+.fs-footer-menu {font-size: var(--fs-footer-menu);}
+.fs-wittnes-name {font-size: var(--fs-wittnes-name);}
+.fs-wittnes-position {font-size: var(--fs-wittnes-position);}
+
+.ls-primary-heading {font-size: var(--ls-primary-heading);}
+.ls-secondary-heading {font-size: var(--ls-secondary-heading);}
+.ls-third-heading {font-size: var(--ls-primary-thirdeading);}
+.ls-fourth-heading {font-size: var(--ls-primary-fourthng);}
+.ls-body-text-large {font-size: var(--ls-body-text-large)}
+.ls-body-text-small {font-size: var(--ls-body-text-small)}
+.ls-link-text {font-size: var(--ls-link-text);}
+.ls-main-menu {font-size: var(--ls-main-menu);}
+.ls-footer-menu {font-size: var(--ls-footer-menu);}
+.ls-wittnes-name {font-size: var(--ls-wittnes-name);}
+.ls-wittnes-position {font-size: var(--ls-wittnes-position);}
+
+.fw-normal {font-weight: 600;}
+.fw-bold {font-weight: 700;}
+.fw-extra-bold {font-weight: 900;}
+
+.fclr-primary-heading {font-size: var(--fclr-primary-heading);}
+.fclr-secondary-heading {font-size: var(--fclr-secondary-heading);}
+.fclr-third-heading {font-size: var(--fclr-primary-thirdeading);}
+.fclr-fourth-heading {font-size: var(--fclr-primary-fourthng);}
+
+/* END OF DEFINITON OF UTILITY-CLASSES  */
+
+* { /* Reseting some basics */
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border:none;
+}
+
+html {font-size: 100%;}  /* improved accessibility */
+h1, h2, h3, h4 {font-family: var(--ff-heading);}
+body {
+    max-width: 500px;
+    margin: auto;
+    font-family: var(--ff-text);
+    border: 1px solid red;
+}
+
