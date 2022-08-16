@@ -20,9 +20,9 @@ main-menu               20px/600/25px         18px/600/25px
 
 footer-menu             18px/600/25px         18px/600/25px
 
-wittnes-name            18px/900/22px         18px/900/22px 
+witness-name            18px/900/22px         18px/900/22px 
 
-wittnes-position        14px/600/25px         14px/600/25px     */
+witness-position        14px/600/25px         14px/600/25px     */
 
 
 /*
@@ -57,8 +57,8 @@ ff-text: Barlow */
     --fs-link-text:         var(--fs-200);
     --fs-main-menu:         var(--fs-500);
     --fs-footer-menu:       var(--fs-400);
-    --fs-wittnes-name:      var(--fs-400);
-    --fs-wittnes-position:  var(--fs-100);
+    --fs-witness-name:      var(--fs-400);
+    --fs-witness-position:  var(--fs-100);
 
     /* all line-spacings */
     --ls-200: 1.375rem;  /* 22px */
@@ -80,8 +80,8 @@ ff-text: Barlow */
     --ls-link-text:         var(--ls-300);
     --ls-main-menu:         var(--ls-300);
     --ls-footer-menu:       var(--ls-300);
-    --ls-wittnes-name:      var(--ls-200);
-    --ls-wittnes-position:  var(--ls-100);
+    --ls-witness-name:      var(--ls-200);
+    --ls-witness-position:  var(--ls-100);
 
 
     --fw-normal: 600;
@@ -128,29 +128,29 @@ ff-text: Barlow */
 .fs-link-text {font-size: var(--ls-link-text);}
 .fs-main-menu {font-size: var(--fs-main-menu);}
 .fs-footer-menu {font-size: var(--fs-footer-menu);}
-.fs-wittnes-name {font-size: var(--fs-wittnes-name);}
-.fs-wittnes-position {font-size: var(--fs-wittnes-position);}
+.fs-witness-name {font-size: var(--fs-witness-name);}
+.fs-witness-position {font-size: var(--fs-witness-position);}
 
-.ls-primary-heading {font-size: var(--ls-primary-heading);}
-.ls-secondary-heading {font-size: var(--ls-secondary-heading);}
-.ls-third-heading {font-size: var(--ls-primary-thirdeading);}
-.ls-fourth-heading {font-size: var(--ls-primary-fourthng);}
-.ls-body-text-large {font-size: var(--ls-body-text-large)}
-.ls-body-text-small {font-size: var(--ls-body-text-small)}
-.ls-link-text {font-size: var(--ls-link-text);}
-.ls-main-menu {font-size: var(--ls-main-menu);}
-.ls-footer-menu {font-size: var(--ls-footer-menu);}
-.ls-wittnes-name {font-size: var(--ls-wittnes-name);}
-.ls-wittnes-position {font-size: var(--ls-wittnes-position);}
+.ls-primary-heading {line-height: var(--ls-primary-heading);}
+.ls-secondary-heading {line-height: var(--ls-secondary-heading);}
+.ls-third-heading {line-height: var(--ls-primary-thirdeading);}
+.ls-fourth-heading {line-height: var(--ls-primary-fourthng);}
+.ls-body-text-large {line-height: var(--ls-body-text-large)}
+.ls-body-text-small {line-height: var(--ls-body-text-small)}
+.ls-link-text {line-height: var(--ls-link-text);}
+.ls-main-menu {line-height: var(--ls-main-menu);}
+.ls-footer-menu {line-height: var(--ls-footer-menu);}
+.ls-witness-name {line-height: var(--ls-witness-name);}
+.ls-witness-position {line-height: var(--ls-witness-position);}
 
 .fw-normal {font-weight: 600;}
 .fw-bold {font-weight: 700;}
 .fw-extra-bold {font-weight: 900;}
 
-.fclr-primary-heading {font-size: var(--fclr-primary-heading);}
-.fclr-secondary-heading {font-size: var(--fclr-secondary-heading);}
-.fclr-third-heading {font-size: var(--fclr-primary-thirdeading);}
-.fclr-fourth-heading {font-size: var(--fclr-primary-fourthng);}
+.fclr-primary-heading {color: var(--fclr-primary-heading);}
+.fclr-secondary-heading {color: var(--fclr-secondary-heading);}
+.fclr-third-heading {color: var(--fclr-primary-thirdeading);}
+.fclr-fourth-heading {color: var(--fclr-primary-fourthng);}
 
 /* END OF DEFINITON OF UTILITY-CLASSES  */
 
@@ -170,3 +170,26 @@ body {
     border: 1px solid red;
 }
 
+section.hero {margin:66px 24px 86px; }
+
+#card-1, #card-3 {
+    width:100%;
+    height:; /* vw-unit for a responsive div-height?? */
+    aspect-ratio: ;
+}
+
+#card-1 {background: url("images/mobile/image-transform.jpg") top left / cover no-repeat;}
+#card-3 {background: url("images/mobile/image-stand-out.jpg") top left / cover no-repeat;}
+#card-5 {background: url("images/mobile/image-graphic-design.jpg") top left / cover no-repeat;}
+#card-6 {background: url("images/mobile/image-photography.jpg") top left / cover no-repeat;}
+
+
+.testimonial {text-align: center;}
+
+.testimonial-text {margin:32px auto;}
+
+img.witness {
+    width:72px;
+    height: 72px;
+    border-radius: 36px;
+}
