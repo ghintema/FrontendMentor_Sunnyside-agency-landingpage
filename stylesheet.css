@@ -176,16 +176,93 @@ body {
     border: 1px solid red;
 }
 
+header {
+    background: url("images/mobile/image-header.jpg") no-repeat center bottom;
+    background-size: cover;
+    height: 538px;
+}
+
+#header-logo {
+    width:123px;
+    margin:32px 24px;
+    float: left;
+}
+
+input {display: none;}
+
+label {
+    width:24px;
+    height: 18px;
+    margin:32px 24px;
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+#arrow-down{
+    display: block;
+    margin:48px auto; 
+    height: 107px;
+}
+
+#nav-header {
+    position: relative;
+    clear:both;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width:87.733%;
+    background: #fffcf8;
+}
+.triangle {
+    position: absolute;
+    right:0px;
+    top:-40px;
+    width:0px;
+    height:0px;
+    border:20px solid #fffcf8;
+    border-left-color: #4abdf2;
+    border-top-color: #4abdf2;
+    background: #fffcf8;
+}
+.menu > li{
+    text-align: center;
+    margin:32px;
+}
+
+.menu a {color:#808397}
+#contact {
+    width:140px;
+    height: 56px;
+    border-radius: 28px;
+    background-color: hsl(51, 100%, 49%);
+    font-family: var(--ff-heading);
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#contact:hover {
+    cursor: pointer;
+    background-color: hsl(51, 100%, 69%);
+}
+
+#opener:checked ~ #nav-header {
+    background-color: red;
+}
+
 section.hero {
     margin:66px 0px 86px; 
     text-align: center;
 }
 
-.card {position: relative;}
-.card > img {width:100%;}
-#card-2, #card-4 {padding: 64px 24px;}
+.card                {position: relative;}
+.card > img          {width:100%;}
+#card-2, #card-4     {padding: 64px 24px;}
 #card-2 > p, 
-#card-4 > p {margin: 24px 0px 32px}
+#card-4 > p          {margin: 24px 0px 32px}
 #card-5 > .text      {color: #24554a}
 #card-6 > .text > h3 {color: #1e5269} 
 #card-6 > .text > p  {color: #19536c;}
@@ -207,7 +284,7 @@ section.hero {
     border-radius:5px;
     z-index: -1;
 }
-#card-4 .learn-more:after {background-color: #ffdbd4;}
+#card-4 .learn-more:after        {background-color:#ffdbd4;}
 #card-2 .learn-more:hover:after  {background-color:#fad400}
 #card-4 .learn-more:hover:after  {background-color:#fe7766}
 
@@ -220,11 +297,9 @@ section.hero {
     margin: 27px 24px;
 }
 
-
 .testimonials {
     text-align: center;
     margin:24px;
-    border:1px solid red;
 }
 
 .testimonial {margin:64px 0px}
@@ -242,13 +317,13 @@ img.witness {
 }
 
 
-.images img {
-    width:50%;
+footer img {
+    width:50%; /* 2-column layout */
     margin:0;
     float:left;
 }
 
-.nav-footer {
+#nav-footer {
     background-color: hsl(168, 44%, 70%);
     display: flex;
     width:100%;
@@ -257,15 +332,22 @@ img.witness {
 }
 
 .footer-logo {
-    border:1px solid red;
-    width:300px;
+    margin-top:64px;
+    min-width: 150px;
+    width: 45.333%;  /* 170px / 375px */
 }
 
 .footer-menu {
     display: flex;
     justify-content: space-around;
-    margin:20px 10%;
+    margin:40px 10%;
     width: 100%;
     
 }
 .footer-menu a {color: hsl(168, 34%, 41%);}
+
+.social-icon-container {
+    display: flex;
+    gap: 28px;
+    margin: 48px auto 80px; /*margins don't collaps for flex-items */
+}

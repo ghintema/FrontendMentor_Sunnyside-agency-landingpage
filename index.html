@@ -16,22 +16,22 @@
   </style>
 </head>
 <body>
-  <head>
-    <img src="images/logo.svg" alt="Logo">
-    <nav>
+  <header>
+    <img id="header-logo" src="images/logo.svg" alt="Logo">
+    <label for="opener"><img id="hamburger-icon" src="images/icon-hamburger.svg" alt="Hamburger-icon"></label>
+    <input id="opener" type="checkbox" >
+    <nav id="nav-header">
       <div class="triangle"></div>
-      <input id="open-menu" type="checkbox">
-      <lable for="open-menu"><img id="hamburger-icon" src="images/icon-hamburger.svg" alt="Hamburger-icon"></lable>
-      <ul class="Menu">
+      <ul class="menu">
         <li><a class="fs-main-menu ls-main-menu" href="#">About</a></li>
         <li><a class="fs-main-menu ls-main-menu" href="#">Services</a></li>
-        <li><a class="fs-main-menu ls-main-menu" href="#">Projects/a></li>
-        <li><a id="contact" href="#">Contact</a></li>
+        <li><a class="fs-main-menu ls-main-menu" href="#">Projects</a></li>
+        <li><a class="fw-extra-bold fclr-secondary-heading" href="#"><button id="contact">Contact</button></a></li>
       </ul>
     </nav>
-    <h1>We are creatives</h1>
-    <img src="images/icon-arrow-down.svg" alt="icon arrow down">
-  </head>
+    <h1 class="fs-primary-heading ls-primary-heading fw-extra-bold fclr-primary-heading ">We are creatives</h1>
+    <img id="arrow-down" src="images/icon-arrow-down.svg" alt="icon arrow down">
+  </header>
   <main>
     <section class="hero">
       <div class="card" id="card-1">
@@ -91,18 +91,22 @@
       </div>
     </section>
     <footer>
-      <div class="images">
-        <img src="images/mobile/image-gallery-milkbottles.jpg" alt="milkbottles">
-        <img src="images/mobile/image-gallery-orange.jpg" alt="Orange">
-        <img src="images/mobile/image-gallery-cone.jpg" alt="ice-cone">
-        <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar-cubes">
-      </div>
-      <nav class="nav-footer">
+      <img src="images/mobile/image-gallery-milkbottles.jpg" alt="milkbottles">
+      <img src="images/mobile/image-gallery-orange.jpg" alt="Orange">
+      <img src="images/mobile/image-gallery-cone.jpg" alt="ice-cone">
+      <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="sugar-cubes">
+      <nav id="nav-footer">
         <img src="images/logo-footer.svg" alt="logo dark-colored" class="footer-logo">
         <div class="footer-menu">
           <li><a class="fs-footer-menu ls-footer-menu" href="#">About</a></li>
           <li><a class="fs-footer-menu ls-footer-menu" href="#">Services</a></li>
           <li><a class="fs-footer-menu ls-footer-menu" href="#">Projects</a></li>
+        </div>
+        <div class="social-icon-container">
+          <img src="images/icon-facebook.svg" alt="icon-facebook" class="social-icon">
+          <img src="images/icon-instagram.svg" alt="icon-instagram" class="social-icon">
+          <img src="images/icon-twitter.svg" alt="icon-twitter" class="social-icon">
+          <img src="images/icon-pinterest.svg" alt="icon-pinterest" class="social-icon">
         </div>
       </nav>
     </footer>
