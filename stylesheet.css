@@ -29,12 +29,10 @@ witness-position        14px/600/25px         14px/600/25px     */
 ff-headline: Fraunces 9pt Soft
 ff-text: Barlow */
 
-
-
 :root {
 
     --ff-heading: 'Fraunces';
-    --ff-text:    'Barrow';
+    --ff-text:    'Barlow';
 
     /* all font-sizes */
     --fs-100: 0.875rem;  /* 14px */
@@ -84,9 +82,9 @@ ff-text: Barlow */
     --ls-witness-position:  var(--ls-100);
 
 
-    --fw-normal: 600;
-    --fs-bold: 700;
-    --fw-extra-bold: 900;
+    --fw-normal:        600;
+    --fs-bold:          700;
+    --fw-extra-bold:    900;
 
     --fclr-1: hsl(212, 27%, 19%);  /* Very dark desaturated blue: */
     --fclr-2: hsl(213, 9%, 39%);     /* Very dark grayish blue */
@@ -94,18 +92,20 @@ ff-text: Barlow */
     --fclr-4: hsl(210, 4%, 67%);    /*  Grayish blue */
     --fclr-5: hsl(0, 0%, 100%);
     --fclr-6: hsl(167, 40%, 24%);
-    --fclr-7: hsla(233, 10%, 55%, 1);
 
     --fclr-primary-heading:     var(--fclr-5);
     --fclr-secondary-heading:   var(--fclr-1);
     --fclr-third-heading:       var(--fclr-6);
     --fclr-fourth-heading:      var(--fclr-4);
-    --fclr-body:                var(--fclr-7);
+    --fclr-body-text-hero:      var(--fclr-3);
+    --fclr-body-text-testi:     var(--fclr-2);
+    --fclr-witness-position:    var(--fclr-4);
 
 }
 
 @media screen and (min-width: 1440px) {
 
+    :root {
     /* font-size adaption for desktop */
     --fs-primary-heading:   var(--fs-900);
     --fs-secondary-heading: var(--fs-800);
@@ -114,43 +114,47 @@ ff-text: Barlow */
     /* line-spacing adaption for desktop */
     --ls-primary-heading:   var(--ls-900);
     --ls-secondary-heading: var(--ls-800);
+    }
 }
 
 
 /*  DEFINITION OF UTILITY-CLASSES   */
 
-.fs-primary-heading {font-size: var(--fs-primary-heading);}
-.fs-secondary-heading {font-size: var(--fs-secondary-heading);}
-.fs-third-heading {font-size: var(--fs-primary-thirdeading);}
-.fs-fourth-heading {font-size: var(--fs-primary-fourthng);}
-.fs-body-text-large {font-size: var(--fs-body-text-large)}
-.fs-body-text-small {font-size: var(--fs-body-text-small)}
-.fs-link-text {font-size: var(--ls-link-text);}
-.fs-main-menu {font-size: var(--fs-main-menu);}
-.fs-footer-menu {font-size: var(--fs-footer-menu);}
-.fs-witness-name {font-size: var(--fs-witness-name);}
-.fs-witness-position {font-size: var(--fs-witness-position);}
+.fs-primary-heading     {font-size: var(--fs-primary-heading);}
+.fs-secondary-heading   {font-size: var(--fs-secondary-heading);}
+.fs-third-heading       {font-size: var(--fs-third-heading);}
+.fs-fourth-heading      {font-size: var(--fs-fourth-heading);}
+.fs-body-text-large     {font-size: var(--fs-body-text-large)}
+.fs-body-text-small     {font-size: var(--fs-body-text-small)}
+.fs-link-text           {font-size: var(--fs-link-text);}
+.fs-main-menu           {font-size: var(--fs-main-menu);}
+.fs-footer-menu         {font-size: var(--fs-footer-menu);}
+.fs-witness-name        {font-size: var(--fs-witness-name);}
+.fs-witness-position    {font-size: var(--fs-witness-position);}
 
-.ls-primary-heading {line-height: var(--ls-primary-heading);}
-.ls-secondary-heading {line-height: var(--ls-secondary-heading);}
-.ls-third-heading {line-height: var(--ls-primary-thirdeading);}
-.ls-fourth-heading {line-height: var(--ls-primary-fourthng);}
-.ls-body-text-large {line-height: var(--ls-body-text-large)}
-.ls-body-text-small {line-height: var(--ls-body-text-small)}
-.ls-link-text {line-height: var(--ls-link-text);}
-.ls-main-menu {line-height: var(--ls-main-menu);}
-.ls-footer-menu {line-height: var(--ls-footer-menu);}
-.ls-witness-name {line-height: var(--ls-witness-name);}
-.ls-witness-position {line-height: var(--ls-witness-position);}
+.ls-primary-heading     {line-height: var(--ls-primary-heading);}
+.ls-secondary-heading   {line-height: var(--ls-secondary-heading);}
+.ls-third-heading       {line-height: var(--ls-third-heading);}
+.ls-fourth-heading      {line-height: var(--ls-fourth-heading);}
+.ls-body-text-large     {line-height: var(--ls-body-text-large)}
+.ls-body-text-small     {line-height: var(--ls-body-text-small)}
+.ls-link-text           {line-height: var(--ls-link-text);}
+.ls-main-menu           {line-height: var(--ls-main-menu);}
+.ls-footer-menu         {line-height: var(--ls-footer-menu);}
+.ls-witness-name        {line-height: var(--ls-witness-name);}
+.ls-witness-position    {line-height: var(--ls-witness-position);}
 
-.fw-normal {font-weight: 600;}
-.fw-bold {font-weight: 700;}
-.fw-extra-bold {font-weight: 900;}
+.fw-normal      {font-weight: 600;}
+.fw-bold        {font-weight: 700;}
+.fw-extra-bold  {font-weight: 900;}
 
-.fclr-primary-heading {color: var(--fclr-primary-heading);}
+.fclr-primary-heading   {color: var(--fclr-primary-heading);}
 .fclr-secondary-heading {color: var(--fclr-secondary-heading);}
-.fclr-third-heading {color: var(--fclr-primary-thirdeading);}
-.fclr-fourth-heading {color: var(--fclr-primary-fourthng);}
+.fclr-third-heading     {color: var(--fclr-third-heading);}
+.fclr-fourth-heading    {color: var(--fclr-fourth-heading);}
+.fclr-body-text-hero    {color: var(--fclr-body-text-hero)}
+.fclr-body-text-testi   {color: var(--fclr-body-text-testi)}
+.fclr-witness-position  {color: var(--fclr-witness-position)}
 
 /* END OF DEFINITON OF UTILITY-CLASSES  */
 
@@ -158,11 +162,13 @@ ff-text: Barlow */
     margin: 0;
     padding: 0;
     text-decoration: none;
-    border:none;
+    border:none; 
+    list-style-type: none;
 }
 
 html {font-size: 100%;}  /* improved accessibility */
 h1, h2, h3, h4 {font-family: var(--ff-heading);}
+
 body {
     max-width: 500px;
     margin: auto;
@@ -170,26 +176,96 @@ body {
     border: 1px solid red;
 }
 
-section.hero {margin:66px 24px 86px; }
-
-#card-1, #card-3 {
-    width:100%;
-    height:; /* vw-unit for a responsive div-height?? */
-    aspect-ratio: ;
+section.hero {
+    margin:66px 0px 86px; 
+    text-align: center;
 }
 
-#card-1 {background: url("images/mobile/image-transform.jpg") top left / cover no-repeat;}
-#card-3 {background: url("images/mobile/image-stand-out.jpg") top left / cover no-repeat;}
-#card-5 {background: url("images/mobile/image-graphic-design.jpg") top left / cover no-repeat;}
-#card-6 {background: url("images/mobile/image-photography.jpg") top left / cover no-repeat;}
+.card {position: relative;}
+.card > img {width:100%;}
+#card-2, #card-4 {padding: 64px 24px;}
+#card-2 > p, 
+#card-4 > p {margin: 24px 0px 32px}
+#card-5 > .text      {color: #24554a}
+#card-6 > .text > h3 {color: #1e5269} 
+#card-6 > .text > p  {color: #19536c;}
+.learn-more {
+    font-family: var(--ff-heading);
+    text-transform: uppercase;
+    display: inline-block;
+    width:137px; /* giving the link the size of the underline, increasing the :hover-area */
+}
+
+.learn-more:after { /* Pseudo-element for the underlining of the links */
+    content: "";
+    position: absolute;
+    left:calc(50% - 68.5px );
+    bottom:65px;
+    width:137px;
+    height: 10px;
+    background-color: #fef2ba;
+    border-radius:5px;
+    z-index: -1;
+}
+#card-4 .learn-more:after {background-color: #ffdbd4;}
+#card-2 .learn-more:hover:after  {background-color:#fad400}
+#card-4 .learn-more:hover:after  {background-color:#fe7766}
+
+.text {
+    position: absolute;
+    bottom:10%; /* clamp to improve responsibility ?? */
+}
+
+.text > p {
+    margin: 27px 24px;
+}
 
 
-.testimonial {text-align: center;}
+.testimonials {
+    text-align: center;
+    margin:24px;
+    border:1px solid red;
+}
 
-.testimonial-text {margin:32px auto;}
+.testimonial {margin:64px 0px}
 
 img.witness {
     width:72px;
     height: 72px;
     border-radius: 36px;
 }
+
+.testimonial-text {margin:32px 0px}
+.witness-name{
+    font-family: var(--ff-heading);
+    margin:9px 0px;
+}
+
+
+.images img {
+    width:50%;
+    margin:0;
+    float:left;
+}
+
+.nav-footer {
+    background-color: hsl(168, 44%, 70%);
+    display: flex;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    border:1px solid red;
+    width:300px;
+}
+
+.footer-menu {
+    display: flex;
+    justify-content: space-around;
+    margin:20px 10%;
+    width: 100%;
+    
+}
+.footer-menu a {color: hsl(168, 34%, 41%);}
