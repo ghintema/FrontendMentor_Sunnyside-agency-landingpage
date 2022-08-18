@@ -170,10 +170,11 @@ html {font-size: 100%;}  /* improved accessibility */
 h1, h2, h3, h4 {font-family: var(--ff-heading);}
 
 body {
-    max-width: 500px;
+    position: relative;
+    max-width: 600px;
     margin: auto;
     font-family: var(--ff-text);
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 header {
@@ -184,7 +185,7 @@ header {
 
 #header-logo {
     width:123px;
-    margin:32px 24px;
+    margin:32px 0px 32px 24px;
     float: left;
 }
 
@@ -193,7 +194,7 @@ input {display: none;}
 label {
     width:24px;
     height: 18px;
-    margin:32px 24px;
+    margin:32px 24px 90px 0px;
     float: right;
 }
 
@@ -201,6 +202,7 @@ h1 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 6px;
+    clear:both;
 }
 #arrow-down{
     display: block;
@@ -208,29 +210,46 @@ h1 {
     height: 107px;
 }
 
-#nav-header {
-    position: relative;
-    clear:both;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
+#nav-header { /* Defining the slide-menu */
+    position: absolute;
+    top:100px;
+    left:-100%;
+    opacity: 0;
     width:87.733%;
+    height: 305px;
     background: #fffcf8;
+    transition: left 0.3s, opacity .5s;
 }
-.triangle {
+#nav-header::before { /*Defining the triangle */
+    content:"";
     position: absolute;
     right:0px;
     top:-40px;
     width:0px;
     height:0px;
     border:20px solid #fffcf8;
-    border-left-color: #4abdf2;
-    border-top-color: #4abdf2;
-    background: #fffcf8;
+    border-left-color:transparent;
+    border-top-color:transparent;
 }
+#opener:checked ~ #nav-header {
+    left:calc( ( 100% - 87.7333%) / 2);
+    opacity: 1;
+    transition: left 0.3s, opacity .5s;
+}
+
+#opener:checked ~ label {
+    opacity: 0.5;
+    transition: opacity .5s;
+}
+
 .menu > li{
     text-align: center;
     margin:32px;
+}
+
+.menu > li:hover, 
+.menu > li:active { 
+    font-weight: 800;
 }
 
 .menu a {color:#808397}
@@ -244,17 +263,17 @@ h1 {
     text-transform: uppercase;
 }
 
-#contact:hover {
+#contact:hover, 
+#contact:active {
     cursor: pointer;
+    font-weight: 800;
     background-color: hsl(51, 100%, 69%);
 }
 
-#opener:checked ~ #nav-header {
-    background-color: red;
-}
+
 
 section.hero {
-    margin:66px 0px 86px; 
+    margin:0px 0px 86px; 
     text-align: center;
 }
 
@@ -262,10 +281,13 @@ section.hero {
 .card > img          {width:100%;}
 #card-2, #card-4     {padding: 64px 24px;}
 #card-2 > p, 
-#card-4 > p          {margin: 24px 0px 32px}
-#card-5 > .text      {color: #24554a}
-#card-6 > .text > h3 {color: #1e5269} 
+#card-4 > p          {margin: 24px 0px 32px;}
+#card-6              {margin: -4px 0px 0px 0px} /*This closes an unexpainable gap... */
+#card-5 > .text      {color: #24554a;}
+#card-6 > .text > h3 {color: #1e5269;} 
 #card-6 > .text > p  {color: #19536c;}
+
+
 .learn-more {
     font-family: var(--ff-heading);
     text-transform: uppercase;
@@ -285,12 +307,14 @@ section.hero {
     z-index: -1;
 }
 #card-4 .learn-more:after        {background-color:#ffdbd4;}
-#card-2 .learn-more:hover:after  {background-color:#fad400}
-#card-4 .learn-more:hover:after  {background-color:#fe7766}
+#card-2 .learn-more:hover::after,
+#card-2 .learn-more:active::after  {background-color:#fad400}
+#card-4 .learn-more:hover:after,
+#card-4 .learn-more:active::after  {background-color:#fe7766}
 
 .text {
     position: absolute;
-    bottom:10%; /* clamp to improve responsibility ?? */
+    bottom:10%; /* clamp to improve responsivnes ?? */
 }
 
 .text > p {
@@ -350,4 +374,47 @@ footer img {
     display: flex;
     gap: 28px;
     margin: 48px auto 80px; /*margins don't collaps for flex-items */
+}
+
+
+
+@media screen and (min-width:1440px) {
+
+    body{max-width: 1440px}
+
+    header {
+        background: url("images/desktop/image-header.jpg") no-repeat center bottom;
+        background-size: cover;
+        height: 800px;
+    }
+    
+    #header-logo {
+        width:170px;
+        margin:46px 0px 116px 40px;
+        float: left;
+    }
+    
+    label {display:none;}
+    
+    #nav-header {
+        position: static;
+        float: right;
+        margin: 34px 48px;
+        width: auto;
+        opacity: 1;
+        background-color: transparent;
+    }
+    
+    .menu > li {
+        display: inline;
+         
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        clear:both;
+    }
+
+
 }
