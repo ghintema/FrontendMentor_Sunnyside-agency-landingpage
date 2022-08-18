@@ -164,6 +164,7 @@ ff-text: Barlow */
     text-decoration: none;
     border:none; 
     list-style-type: none;
+    box-sizing: border-box;
 }
 
 html {font-size: 100%;}  /* improved accessibility */
@@ -212,7 +213,7 @@ h1 {
 
 #nav-header { /* Defining the slide-menu */
     position: absolute;
-    top:100px;
+    top:107px;
     left:-100%;
     opacity: 0;
     width:87.733%;
@@ -224,10 +225,10 @@ h1 {
     content:"";
     position: absolute;
     right:0px;
-    top:-40px;
+    top:-24px;
     width:0px;
     height:0px;
-    border:20px solid #fffcf8;
+    border:12px solid #fffcf8;
     border-left-color:transparent;
     border-top-color:transparent;
 }
@@ -242,17 +243,17 @@ h1 {
     transition: opacity .5s;
 }
 
-.menu > li{
+.menu li{
     text-align: center;
     margin:32px;
 }
-
-.menu > li:hover, 
-.menu > li:active { 
+.menu li:hover, 
+.menu li:active { 
     font-weight: 800;
 }
-
 .menu a {color:#808397}
+
+
 #contact {
     width:140px;
     height: 56px;
@@ -260,13 +261,13 @@ h1 {
     background-color: hsl(51, 100%, 49%);
     font-family: var(--ff-heading);
     font-size: 15px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 #contact:hover, 
 #contact:active {
     cursor: pointer;
-    font-weight: 800;
     background-color: hsl(51, 100%, 69%);
 }
 
@@ -289,17 +290,18 @@ section.hero {
 
 
 .learn-more {
+    position: relative;
     font-family: var(--ff-heading);
     text-transform: uppercase;
     display: inline-block;
-    width:137px; /* giving the link the size of the underline, increasing the :hover-area */
+    width:auto;
 }
 
 .learn-more:after { /* Pseudo-element for the underlining of the links */
     content: "";
     position: absolute;
-    left:calc(50% - 68.5px );
-    bottom:65px;
+    left:calc(50% - 68.5px ); /* half the text minus half the line */
+    top:14px;
     width:137px;
     height: 10px;
     background-color: #fef2ba;
@@ -325,7 +327,7 @@ section.hero {
     text-align: center;
     margin:24px;
 }
-
+h4 {letter-spacing: 4px;}
 .testimonial {margin:64px 0px}
 
 img.witness {
@@ -358,6 +360,7 @@ footer img {
 .footer-logo {
     margin-top:64px;
     min-width: 150px;
+    max-width: 170px;
     width: 45.333%;  /* 170px / 375px */
 }
 
@@ -365,8 +368,7 @@ footer img {
     display: flex;
     justify-content: space-around;
     margin:40px 10%;
-    width: 100%;
-    
+    width: 100%;  
 }
 .footer-menu a {color: hsl(168, 34%, 41%);}
 
@@ -380,7 +382,10 @@ footer img {
 
 @media screen and (min-width:1440px) {
 
-    body{max-width: 1440px}
+    body{ 
+        width: 1440px;
+        max-width: 1440px
+    }
 
     header {
         background: url("images/desktop/image-header.jpg") no-repeat center bottom;
@@ -390,31 +395,101 @@ footer img {
     
     #header-logo {
         width:170px;
-        margin:46px 0px 116px 40px;
+        margin:46px 0px 116px 40px; /* 116px margin to h1 */
         float: left;
     }
     
     label {display:none;}
     
-    #nav-header {
+    #nav-header { 
         position: static;
         float: right;
         margin: 34px 48px;
         width: auto;
+        height: auto;
         opacity: 1;
         background-color: transparent;
     }
     
-    .menu > li {
-        display: inline;
-         
+    .menu li {display: inline;}
+    .menu a  {color: #fff;}
+
+    #contact{
+        color: black;
+        background-color: white;
     }
-    h1 {
-        text-align: center;
-        text-transform: uppercase;
-        letter-spacing: 6px;
-        clear:both;
+    #contact:hover {
+        color:white;
+        background-color: #77cdf5;
     }
 
+    #arrow-down {margin:94px auto}
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        flex-shrink: 1;
+    }
+
+    .card {
+        
+        flex-basis:  50%;
+        height: 600px;
+        margin:0;
+        padding: 0;
+    }
+    #card-1 {order: 2}
+    #card-2 {order: 1}
+    #card-3 {order: 3}
+    #card-4 {order: 4}
+    #card-5 {order: 5}
+    #card-6 {order: 6;
+        margin:0;   /* reversing the fix from line 285... */
+    }
+ 
+    #card-1 img {content: url("images/desktop/image-transform.jpg");}
+    #card-3 img {content: url("images/desktop/image-stand-out.jpg");}
+    #card-5 img {content: url("images/desktop/image-graphic-design.jpg");}
+    #card-6 img {content: url("images/desktop/image-photography.jpg");}
+
+    #card-2, #card-4 {
+        padding:158px 165px;
+        text-align: left;
+    }
+
+    .testimonials {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:0;
+        padding:0px 165px;
+
+    }
+
+    h4 {
+        width:100%;
+        letter-spacing: 5px;
+    }
+    
+    .testimonial {
+        flex-basis: calc( 33.333% - 20px); /* substracting 3*20px from every item resulting in 2 gaps each 30px  */    
+    }
+    
+    footer img {
+        width:25%; /* 4-column layout */
+        margin:0;
+        float:left;
+    }
+
+    .footer-menu {
+        justify-content: center;
+        gap:57px;
+        margin:40px 10%;  
+    }
+
+    footer > img:nth-child(1) {content: url("images/desktop/image-gallery-milkbottles.jpg")}
+    footer > img:nth-child(2) {content: url("images/desktop/image-gallery-orange.jpg")}
+    footer > img:nth-child(3) {content: url("images/desktop/image-gallery-cone.jpg")}
+    footer > img:nth-child(4) {content: url("images/desktop/image-gallery-sugarcubes.jpg")}
 
 }
