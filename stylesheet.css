@@ -103,7 +103,7 @@ ff-text: Barlow */
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 940px) {
 
     :root {
     /* font-size adaption for desktop */
@@ -281,8 +281,8 @@ section.hero {
 .card                {position: relative;}
 .card > img          {width:100%;}
 #card-2, #card-4     {padding: 64px 24px;}
-#card-2 > p, 
-#card-4 > p          {margin: 24px 0px 32px;}
+#card-2 p, 
+#card-4 p            {margin: 24px 0px 32px;}
 #card-6              {margin: -4px 0px 0px 0px} /*This closes an unexpainable gap... */
 #card-5 > .text      {color: #24554a;}
 #card-6 > .text > h3 {color: #1e5269;} 
@@ -380,10 +380,9 @@ footer img {
 
 
 
-@media screen and (min-width:1440px) {
+@media screen and (min-width:820px) {
 
     body{ 
-        width: 1440px;
         max-width: 1440px
     }
 
@@ -405,13 +404,21 @@ footer img {
         position: static;
         float: right;
         margin: 34px 48px;
-        width: auto;
+        width: 60%;
         height: auto;
         opacity: 1;
         background-color: transparent;
     }
     
-    .menu li {display: inline;}
+    .menu {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin:0px;
+    }
+    .menu li {
+        margin: 0 0 0 6% ;
+    }
     .menu a  {color: #fff;}
 
     #contact{
@@ -432,9 +439,8 @@ footer img {
     }
 
     .card {
-        
         flex-basis:  50%;
-        height: 600px;
+        height: auto;
         margin:0;
         padding: 0;
     }
@@ -447,22 +453,38 @@ footer img {
         margin:0;   /* reversing the fix from line 285... */
     }
  
-    #card-1 img {content: url("images/desktop/image-transform.jpg");}
-    #card-3 img {content: url("images/desktop/image-stand-out.jpg");}
-    #card-5 img {content: url("images/desktop/image-graphic-design.jpg");}
-    #card-6 img {content: url("images/desktop/image-photography.jpg");}
+    #card-1 img {content: url("images/desktop/image-transform.jpg"); object-fit: cover;}
+    #card-3 img {content: url("images/desktop/image-stand-out.jpg"); object-fit: cover;}
+    #card-5 img {content: url("images/desktop/image-graphic-design.jpg"); object-fit: cover;}
+    #card-6 img {content: url("images/desktop/image-photography.jpg"); object-fit: cover;}
+
+    /* #card-2, #card-4 {
+        padding: 8.83% 11.4% 0px;
+        text-align: left;
+    } */
 
     #card-2, #card-4 {
-        padding:158px 165px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 2% 6%;
+    }
+
+    :is(#card-2, #card-4) > div {
+        flex-basis:450px;
+        flex-shrink: 1;
         text-align: left;
     }
+
+    :is(#card-2, #card-4) p {margin:7.1% 0px 8.8%;}
 
     .testimonials {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin:0;
-        padding:0px 165px;
+        padding:0px 11.4%; /* 165px / 1440px */
 
     }
 
@@ -472,7 +494,7 @@ footer img {
     }
     
     .testimonial {
-        flex-basis: calc( 33.333% - 20px); /* substracting 3*20px from every item resulting in 2 gaps each 30px  */    
+        width: calc( 33.333% - 20px); /* substracting 3*20px from every item resulting in 2 gaps each 30px  */    
     }
     
     footer img {
