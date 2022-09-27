@@ -371,11 +371,17 @@ footer img {
     width: 100%;  
 }
 .footer-menu a {color: hsl(168, 34%, 41%);}
+.footer-menu a:hover {font-weight: 700;}
 
 .social-icon-container {
     display: flex;
     gap: 28px;
     margin: 48px auto 80px; /*margins don't collaps for flex-items */
+}
+
+.social-icon-container img {width:22px;}
+.social-icon-container img:hover {
+    transform: scale(1.3)
 }
 
 
